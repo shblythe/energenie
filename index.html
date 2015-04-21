@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+<button id="onButton">On</button>
+<button id="offButton">Off</button>
+<p id="message"></p>
+<script>
+$("button#onButton").click(function() {
+	$.post('/energenie/cgi-bin/energenie-on.py')
+	document.getElementById("message").innerHTML="Switched On";
+})
+$("button#offButton").click(function() {
+	$.post('/energenie/cgi-bin/energenie-off.py')
+	document.getElementById("message").innerHTML="Switched Off";
+})
+</script>
+</body>
+</html>
+
